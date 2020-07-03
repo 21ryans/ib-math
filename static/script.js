@@ -33,4 +33,14 @@ function fpush(type, title, url, user_content, user_update, admin_content, admin
         );
 }
 
-alert('yes');
+FirebaseDatabase.DefaultInstance
+    .GetReference("Leaders")
+    .GetValueAsync().ContinueWith(task => {
+        if (task.IsFaulted) {
+            // Handle the error...
+        }
+        else if (task.IsCompleted) {
+            DataSnapshot snapshot = task.Result;
+            alert(snapshot)
+        }
+    });
