@@ -25,6 +25,7 @@ function fpush(type, title, url, user_content, user_update, admin_content, admin
     firebase.database().ref('posts').push().set(obj)
         .then(
             function(snapshot) {
+                alert('ok');
             }, 
             function(error) {
                 alert(error);
