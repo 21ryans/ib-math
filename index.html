@@ -8,35 +8,35 @@
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 	     https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script>
-	  // Your web app's Firebase configuration
-	  var firebaseConfig = {
-	    apiKey: "AIzaSyDoznQPVPPLaUzKXn9sVEJAK8easxP-6rg",
-	    authDomain: "bob-erqrfo.firebaseapp.com",
-	    databaseURL: "https://bob-erqrfo.firebaseio.com",
-	    projectId: "bob-erqrfo",
-	    storageBucket: "bob-erqrfo.appspot.com",
-	    messagingSenderId: "465444855156",
-	    appId: "1:465444855156:web:162dd83c81189bea856021"
-	  };
-	  // Initialize Firebase
-	  firebase.initializeApp(firebaseConfig);
-		alert('ok1')
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+		apiKey: "AIzaSyDoznQPVPPLaUzKXn9sVEJAK8easxP-6rg",
+		authDomain: "bob-erqrfo.firebaseapp.com",
+		databaseURL: "https://bob-erqrfo.firebaseio.com",
+		projectId: "bob-erqrfo",
+		storageBucket: "bob-erqrfo.appspot.com",
+		messagingSenderId: "465444855156",
+		appId: "1:465444855156:web:162dd83c81189bea856021"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
 	</script>
 	<script>
 		function saveToFirebase(email) {
-    var emailObject = {
-        email: email
-    };
+		var emailObject = {
+			email: email
+		};
 
-    firebase.database().ref('subscription-entries').push().set(emailObject)
-        .then(function(snapshot) {
-            alert('ok')
-        }, function(error) {
-            alert('error' + error)
-        });
-}
+		firebase.database().ref('subscription-entries').push().set(emailObject)
+			.then(function(snapshot) {
+			alert('ok')
+			}, 
+			function(error) {
+				alert('error' + error)
+			});
+		}
 
-saveToFirebase(email);
+		saveToFirebase(email);
 	</script>		
 	<script src = "/static/script.js"></script>
 	</body>
