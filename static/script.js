@@ -34,7 +34,7 @@ function fpush(type, title, url, user_content, user_update, admin_content, admin
 }
 
 FirebaseDatabase.DefaultInstance
-    .GetReference("Leaders")
+    .GetReference("posts")
     .GetValueAsync().ContinueWith(task => {
         if (task.IsFaulted) {
             alert('e');
