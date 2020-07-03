@@ -5,10 +5,9 @@ function saveToFirebase(email) {
 
     firebase.database().ref('subscription-entries').push().set(emailObject)
         .then(function(snapshot) {
-            success(); // some success method
+            alert('ok')
         }, function(error) {
-            console.log('error' + error);
-            error(); // some error method
+            alert('error' + error)
         });
 }
 
