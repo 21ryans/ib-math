@@ -21,6 +21,22 @@
 	  // Initialize Firebase
 	  firebase.initializeApp(firebaseConfig);
 	</script>
+	<script>
+		function saveToFirebase(email) {
+    var emailObject = {
+        email: email
+    };
+
+    firebase.database().ref('subscription-entries').push().set(emailObject)
+        .then(function(snapshot) {
+            alert('ok')
+        }, function(error) {
+            alert('error' + error)
+        });
+}
+
+saveToFirebase(email);
+	</script>		
 	<script src = "/static/script.js"></script>
 	</body>
 </html>
