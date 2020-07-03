@@ -28,15 +28,18 @@
 			};
 
 			firebase.database().ref('subscription-entries').push().set(emailObject)
-				.then(function(snapshot) {
-					alert('ok')
-				}, 
-				function(error) {
-					alert('error' + error)
-				});
+				.then(
+					function(snapshot) {
+						alert('ok');
+					}, 
+					function(error) {
+						alert('error' + error);
+					}
+				);
 		}
 
 		saveToFirebase('some email');
+		alert('done')
 	</script>		
 	<!--<script src = "/static/script.js"></script>-->
 	</body>
