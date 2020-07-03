@@ -37,10 +37,10 @@ FirebaseDatabase.DefaultInstance
     .GetReference("Leaders")
     .GetValueAsync().ContinueWith(task => {
         if (task.IsFaulted) {
-            // Handle the error...
+            alert('e');
         }
         else if (task.IsCompleted) {
             DataSnapshot snapshot = task.Result;
-            alert(snapshot)
+            alert(snapshot);
         }
     });
