@@ -32,3 +32,5 @@ function fpush(type, title, url, user_content, user_update, admin_content, admin
             }
         );
 }
+
+alert('yes');
