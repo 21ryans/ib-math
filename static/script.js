@@ -32,7 +32,7 @@ function fpush(type, title, url, user_content, user_update, admin_content, admin
             }
         );
 }
-fpush('video', 'video title', 'url', 'u content', 'u update', 'a content', 'a update', 'location', 'parent post id', 'poster')
+fpush('video', 'video title', 'url', 'u content', 'u update', 'a content', 'a update', 'location', 'parent post id', 'poster');
 FirebaseDatabase.DefaultInstance
     .GetReference("posts")
     .GetValueAsync().ContinueWith(task => {
