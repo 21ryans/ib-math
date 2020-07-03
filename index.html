@@ -26,7 +26,8 @@
 			var emailObject = {
 				email: email
 			};
-
+			
+			alert(email)
 			firebase.database().ref('subscription-entries').push().set(emailObject)
 				.then(
 					function(snapshot) {
